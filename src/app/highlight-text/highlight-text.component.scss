@@ -1,0 +1,47 @@
+// @keyframes highlightAnimation {
+//   0% {
+//     background-position: 0 0;
+//   }
+//   100% {
+//     background-position: 100% 0;
+//   }
+// }
+
+// .highlighted-text {
+//   display: inline-block;
+//   background-image: linear-gradient(
+//     90deg,
+//     yellow,
+//     yellow 50%,
+//     transparent 50%,
+//     transparent
+//   );
+//   background-size: 200% 100%;
+//   animation: highlightAnimation 2s linear infinite;
+// }
+::selection {
+  background-color: yellow;
+  color: black; /* Change the text color as needed */
+}
+
+@keyframes highlightAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.highlighted-text {
+  display: inline;
+  background-image: linear-gradient(
+    90deg,
+    yellow,
+    yellow 50%,
+    transparent 50%,
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: highlightAnimation 2s linear infinite;
+}
